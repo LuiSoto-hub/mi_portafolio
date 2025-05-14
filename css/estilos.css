@@ -1,0 +1,130 @@
+
+
+/* Fuente base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #2b0000,
+    #000000 40%,
+    #1a0033 70%,
+    #000033
+  );
+  color: white; /* texto blanco para contraste */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.card-deck{
+  position: relative;
+  left: 100px;
+  perspective: 1200px;
+}
+
+.card-deck img{
+  position: absolute;
+  left: 100px;
+  width: 230px;
+  height: 280px;
+  transition: 0.8s;
+  transform-origin: bottom center;
+  cursor: pointer;
+}
+
+.card-selected{
+  z-index: 10;
+  transform: scale(1.5) translateY(50%) !important;
+
+}
+
+.card-deck img:nth-child(1){transform: rotate(-40deg);}
+.card-deck img:nth-child(2){transform: rotate(-20deg);}
+.card-deck img:nth-child(3){transform: rotate(-0deg);}
+.card-deck img:nth-child(4){transform: rotate(20deg);}
+
+/* ENCABEZADO */
+header {
+  color: white;
+  padding: 1.5em 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+
+.menu {
+  position: fixed;
+  top: 0; /* Fija en la parte superior */
+  left: 0; /* Comienza desde el borde izquierdo */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 2em;
+
+  padding: 1em 0; /* Añade padding vertical */
+  margin: 0; /* Elimina márgenes por defecto */
+  z-index: 1000;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+ 
+  padding: 0.5em 1em; /* Mejor espaciado para los enlaces */
+}
+    .menu a:hover {
+      background-color: #0066cc;
+    }
+
+     .menu.scrolled {
+      background-color: #230536; /* Color al hacer scroll */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 50px;
+      height: 20px;
+      width: 50%;
+      left:30%;
+      top: 10px;
+    }
+/* Inicio */
+.inicio {
+  height: 1550px;
+   width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+div#perfil{
+float: right;
+height: 500px;
+position: relative;
+}
+
+.img-fondo {
+  width:400px; /* Ocupa todo el ancho del contenedor */
+  height:400px; /* Ocupa todo el alto del contenedor */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  margin-top: 100px;
+}
+
+.img-superior {
+  position:absolute; /* Se posiciona respecto al contenedor relativo */
+  top: 0px; /* Ajusta la posición vertical */
+  left: 0px; /* Ajusta la posición horizontal */
+  width: 300px; /* Tamaño de la imagen superior */
+  height: 100%;
+ border-radius: 90px;/* Esto aplicará 90px a todas las esquinas */
+   overflow: hidden; /* Asegura que la imagen no sobresalga */
+   margin-left: 50px;
+   margin-top: -30px;
+
+}
