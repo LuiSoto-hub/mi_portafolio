@@ -5,7 +5,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
   margin: 0;
+  height: 1200px;
   min-height: 100vh;
+  position: relative;
   background: linear-gradient(
     135deg,
     #2b0000,
@@ -16,8 +18,15 @@ body {
   color: white; /* texto blanco para contraste */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.conte-degradado{
+background: radial-gradient(circle at 10px 10px, transparent 20%, transparent 20%);
+height: 100%;
+width: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
 
-
+  }
 
 .card-deck{
   position: relative;
@@ -95,13 +104,13 @@ header h1 {
       top: 10px;
     }
 /* Inicio */
-.inicio {
+/* .inicio {
   height: 1550px;
    width: 80%;
   margin: 0 auto;
   padding: 20px;
 
-}
+} */
 
 div#perfil{
 float: right;

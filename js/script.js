@@ -23,3 +23,44 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.remove('scrolled');
       }
     });
+    
+document.addEventListener("DOMContentLoaded", () => {
+  const conteDegradado = document.querySelector(".conte-degradado");
+  const cards = document.querySelectorAll(".card-img");
+
+  // Gradiente en toda la ventana
+  document.addEventListener("mousemove", (e) => {
+    const x = e.clientX + window.scrollX; // Ajusta con scroll
+    const y = e.clientY + window.scrollY;
+    
+    conteDegradado.style.background = `
+      radial-gradient(
+        circle at ${x}px ${y}px,
+        rgba(255, 255, 255, 0.8) 0%,
+        transparent 150px
+      )
+    `;
+  });
+
+  // Efecto especial al pasar sobre cartas (ejemplo: gradiente más intenso)
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left + window.scrollX; // Posición relativa a la carta
+      const y = e.clientY - rect.top + window.scrollY;
+      
+      conteDegradado.style.background = `
+        radial-gradient(
+          circle at ${x}px ${y}px,
+          rgb(64, 20, 81) 0%,
+          transparent 80px
+        )
+      `;
+    });
+
+    // Resetear al salir de la carta
+    card.addEventListener("mouseleave", () => {
+      conteDegradado.style.background = "transparent";
+    });
+  });
+});
