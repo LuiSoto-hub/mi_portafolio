@@ -1,5 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', function () {
-    const cards = document.querySelectorAll('.card-deck img');
+    const cards = document.querySelectorAll('.card-deck');
 
     cards.forEach(card => {
         card.addEventListener('click', function () {
@@ -10,23 +11,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.classList.add('card-selected');
             }
         });
-    });
-});
+    })
+    // Efecto scroll en menú
+    const menu = document.querySelector('.menu');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            menu.classList.add('scrolled');
+        } else {
+            menu.classList.remove('scrolled');
+        }
+    })
 
-
-
-    window.addEventListener('scroll', function() {
-      const menu = document.querySelector('.menu');
-      if (window.scrollY > 100) {
-        menu.classList.add('scrolled');
-      } else {
-        menu.classList.remove('scrolled');
-      }
-    });
-    
-document.addEventListener("DOMContentLoaded", () => {
-  const conteDegradado = document.querySelector(".conte-degradado");
-  const cards = document.querySelectorAll(".card-img");
+    // Validación de .conte-degradado
+    const conteDegradado = document.querySelector(".conte-degradado");
+    if (conteDegradado) {
+        // Puedes agregar lógica aquí si se necesita más adelante
+        console.log("Conte-degradado cargado");
+    }
 
   // Gradiente en toda la ventana
   document.addEventListener("mousemove", (e) => {

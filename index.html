@@ -8,58 +8,36 @@
   <link rel="stylesheet" href="css/estilos.css" />
  
 </head>
-  <div class="conte-degradado">
 <body>
+  <div class="conte-degradado">
+
   
    <script src="/js/script.js"></script>
- 
-  <!-- Encabezado -->
-  <header>
-    <div class="contenedor">
-     
-      <nav>
-        <ul class="menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="./about.html">Sobre mí</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Sección de Inicio -->
-  <section id="inicio" class="inicio">
-    
-      <div class="card-deck">
-        <img src="img/cartas1.png" alt=""> <!-- se añaden las imagenes en este caso las cartas 3d en estilo de baraja  -->
-        <img src="img/cartas2.png" alt="">
-        <img src="img/cartas3.png" alt="">
-        <img src="img/cartas4.png" alt="">
- 
-      </div>
+  <!-- Encabezado -->
+<header class="menu" id="mainMenu">
+  <img src="/img/logo.png" alt="Logo" class="logo" />
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#acerca">Acerca de mi</a>
+    <a href="#proyectos" class="disabled">Proyectos</a>
+    <a href="#contacto">Contáctame</a>
+  </nav>
+</header>
+ <div class="contenedor">
+<!-- tarjetas -->
+<div class="deck-container">
+  <img class="card-deck" src="img/carta1.png" />
+  <img class="card-deck" src="img/carta2.png" />
+  <img class="card-deck" src="img/carta3.png" />
+  <img class="card-deck" src="img/carta4.png" />
+  <img class="card-deck" src="img/carta5.png" />
+</div>
      <div id="perfil"><!-- vamos añadir unas imagenes de perfil  -->
       <img src="img/sol.png" class="img-fondo">
           <img src="img/foto de perfilb.png" class="img-superior">
-
-    
-
   </div>
-   
-  </section>
-
- 
-
-
-
-
-  <!-- Pie de página -->
-  <footer>
-    <div class="contenedor">
-      <p>&copy; 2025 Tweed. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  </div>
 </div>
 </body>
 </html>
